@@ -1,0 +1,16 @@
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\bin\Release\Chapter9VBNET.exe
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\bin\Release\Chapter9VBNET.pdb
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\bin\Release\Chapter9VBNET.xml
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\ResolveAssemblyReference.cache
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9.DequeueSyncAsync.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9.EnqueueDequeueMultipleMsg.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9.EnqueueDequeueSimpleMsg.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9.EnqueueDequeueUDT.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9.EnqueueDequeueXML.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9.Chapter_9.EnqueueMCQ.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9.Main.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9.Resources.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9VBNET.vbproj.GenerateResource.Cache
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9VBNET.exe
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9VBNET.xml
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter9VBNET\obj\Release\Chapter9VBNET.pdb

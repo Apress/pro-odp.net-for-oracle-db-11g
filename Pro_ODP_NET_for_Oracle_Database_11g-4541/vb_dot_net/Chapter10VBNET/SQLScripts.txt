@@ -1,0 +1,69 @@
+﻿CREATE TABLE "EDZEHOO"."PRODUCT_EXTRAINFO" (
+"ID" VARCHAR2(10) NOT NULL,
+"INFO" XMLTYPE,
+CONSTRAINT "EXTRAINFO_PRIMKEY" PRIMARY KEY ("ID") VALIDATE);
+
+INSERT INTO PRODUCT_EXTRAINFO (ID, INFO)
+VALUES('E1','<PRODUCT><CATEGORY>Engines</CATEGORY>
+<PERSON_IN_CHARGE>Johnson Adams</PERSON_IN_CHARGE>
+<REGIONAL_PRICING><EASTASIA>45.00</EASTASIA><AMERICAS>20.00</AMERICAS>
+</REGIONAL_PRICING></PRODUCT>');
+
+INSERT INTO PRODUCT_EXTRAINFO (ID, INFO)
+VALUES('R1','<PRODUCT><CATEGORY>Lamps</CATEGORY>
+<PERSON_IN_CHARGE>Kathy Wick</PERSON_IN_CHARGE>
+<REGIONAL_PRICING><EASTASIA>50.00</EASTASIA><AMERICAS>15.00</AMERICAS>
+</REGIONAL_PRICING></PRODUCT>');
+
+CREATE OR REPLACE PROCEDURE proc_GetProdInfo
+(
+ProductID IN VARCHAR2,
+xmlProductInfo OUT XMLTYPE
+)
+IS
+BEGIN
+SELECT INFO INTO xmlProductInfo FROM Product_ExtraInfo WHERE ID=ProductID;
+END;
+
+CREATE OR REPLACE PROCEDURE proc_InsertProdInfo
+(
+ProductID IN VARCHAR2,
+xmlProductInfo IN XMLTYPE
+)
+IS
+BEGIN
+INSERT INTO Product_ExtraInfo(ID, INFO) VALUES(ProductID,xmlProductInfo);
+END;
+
+GRANT RESOURCE TO EDZEHOO;
+GRANT ALTER SESSION TO EDZEHOO;
+GRANT CREATE VIEW TO EDZEHOO;
+
+DECLARE
+SCHEMASTRING VARCHAR2(4000);
+BEGIN
+SCHEMASTRING:= '<schema xmlns="http://www.w3.org/2001/XMLSchema" ' ||
+'targetNamespace="PRODUCT.xsd" ' ||
+'xmlns:PRODUCT="PRODUCT.xsd" ' ||
+'xmlns:xdb="http://xmlns.oracle.com/xdb" ' ||
+'elementFormDefault="qualified" version="1.0"> ' ||
+'<complexType name = "PRODUCTTYPE"> ' ||
+'<sequence> ' ||
+' <element name = "CATEGORY" type="string"/> ' ||
+' <element name = "PERSON_IN_CHARGE" type="string"/> ' ||
+' <element name = "REGIONAL_PRICING"> ' ||
+' <complexType>' ||
+' <sequence>' ||
+' <element name = "EASTASIA" type="float"/> ' ||
+' <element name = "AMERICAS" type="float"/> ' ||
+' </sequence>' ||
+' </complexType>' ||
+' </element>' ||
+'</sequence> ' ||
+'</complexType> ' ||
+'<element name = "PRODUCT" type="PRODUCT:PRODUCTTYPE"/> ' ||
+'</schema>';
+DBMS_XMLSCHEMA.RegisterSchema('PRODUCT.xsd', SCHEMASTRING, true, true, false);
+END;
+/
+

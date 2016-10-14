@@ -1,0 +1,2 @@
+
+The authors have graciously provided example code in both C# and VB.NET. This one zip archive contains both sets of examples. Look under the folder c_sharp for the C# example code. Look under the folder vb_dot_net for the VB.NET example code.

@@ -1,0 +1,18 @@
+﻿CREATE OR REPLACE PACKAGE ProductsPackage IS
+TYPE DecimalArray IS TABLE OF DECIMAL INDEX BY BINARY_INTEGER;
+TYPE StringArray IS TABLE OF VARCHAR2(255) INDEX BY BINARY_INTEGER;
+PROCEDURE proc_UpdateMultiplePrices(ProdPrices IN DecimalArray, ProdNames IN
+StringArray);
+END ProductsPackage;
+
+CREATE OR REPLACE PACKAGE BODY ProductsPackage IS
+PROCEDURE proc_UpdateMultiplePrices(ProdPrices IN DecimalArray, ProdNames IN
+StringArray)
+IS
+BEGIN
+FOR i IN 1..ProdNames.LAST
+LOOP
+UPDATE Products SET Price = Price + ProdPrices(i) WHERE Name = ProdNames(i);
+END LOOP;
+END;
+END ProductsPackage;

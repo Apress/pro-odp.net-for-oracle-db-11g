@@ -1,0 +1,154 @@
+﻿//You will need to run these scripts in SQL*Plus before running the samples in this project
+
+GRANT CREATE ANY PROCEDURE TO "EDZEHOO";
+GRANT ALTER ANY PROCEDURE TO "EDZEHOO";
+GRANT CREATE ANY TYPE TO "EDZEHOO";
+
+CREATE OR REPLACE PROCEDURE proc_InsertProduct IS
+BEGIN
+INSERT INTO Products(ID, NAME, PRICE,REMARKS) VALUES('H1', 'Hydraulics',100.00,
+'Inserted via PL/SQL stored procedure');
+END;
+
+CREATE OR REPLACE PROCEDURE proc_UpdateProduct
+(
+decPrice IN DECIMAL,
+strProductName IN VARCHAR2
+)
+IS
+BEGIN
+UPDATE Products SET Price=Price + decPrice WHERE Name=strProductName;
+END;
+
+CREATE OR REPLACE PROCEDURE proc_RetrieveCount
+(
+intRecordCount OUT NUMBER
+)
+IS
+BEGIN
+SELECT COUNT(*) INTO intRecordCount FROM Products;
+END;
+
+CREATE OR REPLACE FUNCTION func_RetrieveCount
+RETURN NUMBER
+IS
+intRecordCount NUMBER;
+BEGIN
+SELECT COUNT(*) INTO intRecordCount FROM Products;
+RETURN intRecordCount;
+END;
+
+CREATE OR REPLACE PACKAGE ProductsPackage IS
+TYPE DecimalArray IS TABLE OF DECIMAL INDEX BY BINARY_INTEGER;
+TYPE StringArray IS TABLE OF VARCHAR2(255) INDEX BY BINARY_INTEGER;
+PROCEDURE proc_UpdateMultiplePrices(ProdPrices IN DecimalArray, ProdNames IN
+StringArray);
+END ProductsPackage;
+
+CREATE OR REPLACE PACKAGE BODY ProductsPackage IS
+PROCEDURE proc_UpdateMultiplePrices(ProdPrices IN DecimalArray, ProdNames IN
+StringArray)
+IS
+BEGIN
+FOR i IN 1..ProdNames.LAST
+LOOP
+UPDATE Products SET Price = Price + ProdPrices(i) WHERE Name = ProdNames(i);
+END LOOP;
+END;
+END ProductsPackage;
+
+CREATE OR REPLACE PACKAGE ProductsPackage IS
+TYPE DecimalArray IS TABLE OF DECIMAL INDEX BY BINARY_INTEGER;
+TYPE StringArray IS TABLE OF VARCHAR2(255) INDEX BY BINARY_INTEGER;
+PROCEDURE proc_GetAllProductNames(ProdNames OUT StringArray);
+END ProductsPackage;
+
+CREATE OR REPLACE PACKAGE BODY ProductsPackage IS
+PROCEDURE proc_GetAllProductNames(ProdNames OUT StringArray)
+IS
+BEGIN
+SELECT Name BULK COLLECT INTO ProdNames FROM Products;
+END;
+END ProductsPackage;
+
+CREATE OR REPLACE TYPE ProductVArray AS VARRAY(3000) OF VARCHAR2(10);
+
+CREATE OR REPLACE PROCEDURE proc_DeleteProducts(arrProduct IN ProductVArray) IS
+BEGIN
+FOR i IN 1..arrProduct.LAST
+LOOP
+DELETE FROM Products WHERE ID = arrProduct(i);
+END LOOP;
+END;
+
+CREATE OR REPLACE TYPE ProductNestedTable AS TABLE OF VARCHAR2(10);
+
+CREATE OR REPLACE PROCEDURE proc_DeleteProducts(tblProduct IN ProductNestedTable) IS
+BEGIN
+FOR i IN 1..tblProduct.LAST
+LOOP
+DELETE FROM Products WHERE ID = tblProduct(i);
+END LOOP;
+END;
+
+CREATE OR REPLACE PACKAGE ProductsPackage IS
+TYPE refCursor IS REF CURSOR;
+PROCEDURE proc_GetProductsInfo(ProdInfo OUT refCursor);
+END ProductsPackage;
+
+CREATE OR REPLACE PACKAGE BODY ProductsPackage IS
+PROCEDURE proc_GetProductsInfo(ProdInfo OUT refCursor)
+IS
+BEGIN
+OPEN ProdInfo FOR
+SELECT * FROM Products;
+END;
+END ProductsPackage;
+
+CREATE OR REPLACE PACKAGE ProductsPackage IS
+TYPE refCursor IS REF CURSOR;
+PROCEDURE proc_GetProductsInfo(cheapProducts OUT refCursor, expensiveProducts OUT
+refCursor);
+END ProductsPackage;
+
+CREATE OR REPLACE PACKAGE BODY ProductsPackage IS
+PROCEDURE proc_GetProductsInfo (cheapProducts OUT refCursor,
+expensiveProducts OUT refCursor)
+IS
+BEGIN
+OPEN cheapProducts FOR
+SELECT * FROM Products WHERE Price<500;
+OPEN expensiveProducts FOR
+SELECT * FROM Products WHERE Price>500;
+END;
+END ProductsPackage;
+
+CREATE OR REPLACE TYPE Customer AS OBJECT
+(
+CustomerID VARCHAR2(10),
+CustomerName VARCHAR2(255),
+CustomerDOB DATE
+);
+
+CREATE OR REPLACE TYPE ProductType AS OBJECT
+(
+ID VARCHAR2(10),
+Name VARCHAR2(255),
+Price NUMBER
+);
+
+CREATE OR REPLACE PROCEDURE proc_InsertProduct(udtProduct IN ProductType) IS
+BEGIN
+INSERT INTO Products(ID, Name, Price) VALUES(udtProduct.ID, udtProduct.Name,
+udtProduct.Price);
+END;
+
+CREATE OR REPLACE PROCEDURE proc_UpdatePrice(ProdPrice IN DECIMAL, ProdName IN
+VARCHAR2)
+IS
+BEGIN
+IF ProdPrice<=0 THEN
+RAISE_APPLICATION_ERROR(-20000, 'Invalid price value');
+END IF;
+UPDATE Products SET Price=ProdPrice WHERE Name=ProdName;
+END;

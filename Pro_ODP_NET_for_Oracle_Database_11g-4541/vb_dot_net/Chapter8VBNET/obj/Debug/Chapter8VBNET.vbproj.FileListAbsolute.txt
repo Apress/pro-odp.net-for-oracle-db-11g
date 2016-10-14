@@ -1,0 +1,15 @@
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\bin\Debug\Chapter8VBNET.exe
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\bin\Debug\Chapter8VBNET.pdb
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\bin\Debug\Chapter8VBNET.xml
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\ResolveAssemblyReference.cache
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\Chapter8.ChangeNotificationInformation.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\Chapter8.Main.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\Chapter8.Resources.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\Chapter8.ObjectBasedChangeNotification.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\Chapter8.PollForChanges.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\Chapter8.QueryBasedChangeNotification.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\Chapter8.SelfUpdatingDatagrid.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\Chapter8VBNET.vbproj.GenerateResource.Cache
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\Chapter8VBNET.exe
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\Chapter8VBNET.xml
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter8VBNET\obj\Debug\Chapter8VBNET.pdb

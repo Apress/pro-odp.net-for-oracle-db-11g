@@ -1,0 +1,30 @@
+﻿CREATE TABLE "EDZEHOO"."INVOICE" (
+"INVID" VARCHAR2(10) NOT NULL,
+"INVDATE" DATE,
+"REMARKS" VARCHAR2(4000),
+CONSTRAINT "INVOICEPRIMKEY" PRIMARY KEY ("INVID") VALIDATE);
+
+CREATE TABLE "EDZEHOO"."INVOICEDETAILS" (
+"INVID" VARCHAR2(10) NOT NULL,
+"DESCRIPTION" VARCHAR2(255),
+"QUANTITY" NUMBER(10,2),
+"UNITPRICE" NUMBER(10,2));
+
+CREATE OR REPLACE PROCEDURE proc_InsertSamplePODetails IS
+BEGIN
+INSERT INTO InvoiceDetails(InvID, Description, Quantity, UnitPrice)
+VALUES('A02','Seatbelts',100,50.00);
+INSERT INTO InvoiceDetails(InvID, Description, Quantity, UnitPrice)
+VALUES('A02','Gearstick',50,30.00);
+END;
+
+=================================================================
+The following table to be created in a second database : SECONDDB
+=================================================================
+
+CREATE TABLE "SYSTEM"."RECEIPT" (
+"RECEIPTID" VARCHAR2(10) NOT NULL,
+"RECEIPTDATE" DATE,
+"TOTALAMOUNT" NUMBER(10,2),
+"REMARKS" VARCHAR2(4000),
+CONSTRAINT "RECEIPTPRIMKEY" PRIMARY KEY ("RECEIPTID") VALIDATE);

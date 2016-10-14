@@ -1,0 +1,11 @@
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter6VBNET\bin\Release\Chapter6VBNET.exe
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter6VBNET\bin\Release\Chapter6VBNET.pdb
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter6VBNET\bin\Release\Chapter6VBNET.xml
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter6VBNET\obj\Release\ResolveAssemblyReference.cache
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter6VBNET\obj\Release\Chapter6.Main.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter6VBNET\obj\Release\Chapter6.Resources.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter6VBNET\obj\Release\Chapter6.UpdatingDoubleByteData.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter6VBNET\obj\Release\Chapter6VBNET.vbproj.GenerateResource.Cache
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter6VBNET\obj\Release\Chapter6VBNET.exe
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter6VBNET\obj\Release\Chapter6VBNET.xml
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter6VBNET\obj\Release\Chapter6VBNET.pdb

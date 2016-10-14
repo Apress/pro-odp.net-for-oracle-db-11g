@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68D8FC03-9A84-4C1E-AE58-F2016A5A1656}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chapter_4</RootNamespace>
+    <AssemblyName>Chapter 4</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=2.111.7.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\app\Edzehoo\product\11.1.0\db_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommittingChangesToDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommittingChangesToDatabase.Designer.cs">
+      <DependentUpon>CommittingChangesToDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscoverSchema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscoverSchema.Designer.cs">
+      <DependentUpon>DiscoverSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBinding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBinding.Designer.cs">
+      <DependentUpon>FormBinding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertBFILE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertBFILE.Designer.cs">
+      <DependentUpon>InsertBFILE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertBLOBData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertBLOBData.Designer.cs">
+      <DependentUpon>InsertBLOBData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCLOBData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertCLOBData.Designer.cs">
+      <DependentUpon>InsertCLOBData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterizedQueries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterizedQueries.Designer.cs">
+      <DependentUpon>ParameterizedQueries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CommittingChangesToDatabase.resx">
+      <DependentUpon>CommittingChangesToDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscoverSchema.resx">
+      <DependentUpon>DiscoverSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBinding.resx">
+      <DependentUpon>FormBinding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertBFILE.resx">
+      <DependentUpon>InsertBFILE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertBLOBData.resx">
+      <DependentUpon>InsertBLOBData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertCLOBData.resx">
+      <DependentUpon>InsertCLOBData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterizedQueries.resx">
+      <DependentUpon>ParameterizedQueries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetrieveBFile.resx">
+      <DependentUpon>RetrieveBFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetrieveBLOBData.resx">
+      <DependentUpon>RetrieveBLOBData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetrieveCLOBData.resx">
+      <DependentUpon>RetrieveCLOBData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetrievingDataIntoDataset.resx">
+      <DependentUpon>RetrievingDataIntoDataset.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RetrieveBFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetrieveBFile.Designer.cs">
+      <DependentUpon>RetrieveBFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetrieveBLOBData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetrieveBLOBData.Designer.cs">
+      <DependentUpon>RetrieveBLOBData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetrieveCLOBData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetrieveCLOBData.Designer.cs">
+      <DependentUpon>RetrieveCLOBData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetrievingDataIntoDataset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetrievingDataIntoDataset.Designer.cs">
+      <DependentUpon>RetrievingDataIntoDataset.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQLScripts.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

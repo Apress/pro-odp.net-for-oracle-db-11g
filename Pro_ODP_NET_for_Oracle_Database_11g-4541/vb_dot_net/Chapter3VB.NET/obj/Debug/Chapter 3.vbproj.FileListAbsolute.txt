@@ -1,0 +1,10 @@
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter 3VB.NET\bin\Debug\Chapter 3.exe
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter 3VB.NET\bin\Debug\Chapter 3.pdb
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter 3VB.NET\obj\Debug\ResolveAssemblyReference.cache
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter 3VB.NET\obj\Debug\Chapter_3.Main.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter 3VB.NET\obj\Debug\Resources.resources
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter 3VB.NET\obj\Debug\Chapter 3.vbproj.GenerateResource.Cache
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter 3VB.NET\obj\Debug\Chapter 3.exe
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter 3VB.NET\obj\Debug\Chapter 3.pdb
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter3VB.NET\obj\Debug\Chapter 3.exe
+D:\Business Ventures Backup\Personal Hobbies\Pro ODP.NET Programming\Sourcecode\FullSource\Chapter4VB.NET\Chapter3VB.NET\obj\Debug\Chapter 3.pdb

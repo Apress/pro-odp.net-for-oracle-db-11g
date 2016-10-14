@@ -1,0 +1,83 @@
+﻿GRANT EXECUTE on DBMS_AQADM to EDZEHOO;
+
+BEGIN
+DBMS_AQADM.CREATE_QUEUE_TABLE(
+queue_table=>'EDZEHOO.MY_JOBS_QUEUE_TABLE',
+queue_payload_type=>'RAW',
+multiple_consumers=>FALSE);
+DBMS_AQADM.CREATE_QUEUE(
+queue_name=>'EDZEHOO.MY_JOBS_QUEUE',
+queue_table=>'EDZEHOO.MY_JOBS_QUEUE_TABLE');
+DBMS_AQADM.START_QUEUE(queue_name=>'EDZEHOO.MY_JOBS_QUEUE');
+END;
+
+DECLARE
+SUBSCRIBER SYS.AQ$_AGENT;
+BEGIN
+DBMS_AQADM.CREATE_QUEUE_TABLE
+(
+queue_table => 'EDZEHOO.JobsQueue_Table',
+queue_payload_type => 'RAW',
+sort_list => 'ENQ_TIME',
+message_grouping => DBMS_AQADM.NONE,
+compatible => '10.0',
+comment => '',
+multiple_consumers => TRUE,
+secure => TRUE
+);
+DBMS_AQADM.CREATE_QUEUE
+(
+queue_name => 'EDZEHOO.JobsQueue',
+queue_table => 'EDZEHOO.JobsQueue_Table',
+queue_type => DBMS_AQADM.NORMAL_QUEUE,
+max_retries => 0,
+retry_delay => 0,
+retention_time => 0,
+comment => ''
+);
+SUBSCRIBER := SYS.AQ$_AGENT('JOHNDALY', NULL, NULL);
+DBMS_AQADM.ADD_SUBSCRIBER
+(
+queue_name => 'EDZEHOO.JobsQueue',
+subscriber => SUBSCRIBER,
+queue_to_queue => FALSE,
+delivery_mode => DBMS_AQADM.PERSISTENT
+);
+DBMS_AQADM.ENABLE_DB_ACCESS
+(
+agent_name => 'JOHNDALY',
+db_username => 'EDZEHOO'
+);
+DBMS_AQADM.start_queue(queue_name=>'EDZEHOO.JobsQueue');
+END;
+/
+
+CREATE TYPE EDZEHOO.Jobs_Type AS object(
+JobID VARCHAR2(10),
+JobName VARCHAR2(255),
+JobPrice NUMBER,
+JobDescription VARCHAR2(255));
+
+BEGIN
+DBMS_AQADM.CREATE_QUEUE_TABLE(
+queue_table=>'EDZEHOO.SmallJobs_table',
+queue_payload_type=>'EDZEHOO.Jobs_Type',
+multiple_consumers=>FALSE);
+DBMS_AQADM.CREATE_QUEUE(
+queue_name=>'EDZEHOO.SmallJobs',
+queue_table=>'EDZEHOO.SmallJobs_table');
+DBMS_AQADM.START_QUEUE(queue_name=>'EDZEHOO.SmallJobs');
+END;
+/
+
+BEGIN
+DBMS_AQADM.CREATE_QUEUE_TABLE(
+queue_table=>'EDZEHOO.JobsXML_table',
+queue_payload_type=>'SYS.XMLType',
+multiple_consumers=>FALSE);
+DBMS_AQADM.CREATE_QUEUE(
+queue_name=>'EDZEHOO.JobsXML',
+queue_table=>'EDZEHOO.JobsXML_table');
+DBMS_AQADM.START_QUEUE(queue_name=>'EDZEHOO.JobsXML');
+END;
+/
